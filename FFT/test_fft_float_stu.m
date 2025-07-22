@@ -5,6 +5,6 @@
 
  [cos_float, cos_fixed] = cos_in_gen(fft_mode, N);
 
- % [fft_out, module2_out] = fft_float_print(1, cos_fixed); % Floating-point fft (fft) : Cosine 
+  % [fft_out, module2_out] = fft_float_print(1, cos_fixed); % Floating-point fft (fft) : Cosine 
  
  [fft_out, module2_out] = fft_fixed_3(1, cos_fixed); % Floating-point fft (fft) : Cosine 
