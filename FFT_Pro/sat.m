@@ -1,4 +1,5 @@
 % Added on 2024/01/29 by jihan 
+% 오버플로우 방지를 위해 지정된 비트 폭으로 Saturation 시키는 함수
 function [out_dat] = sat(in_dat, num) % 11 <= num <= 16
 
   if (num==11) 
