@@ -8,17 +8,17 @@ module top_module_02_cbfp #(
     parameter TW_WIDTH = 9 ,      // Twiddle Factor의 비트 폭 (예: 9이면 [8:0])
     parameter TW_TABLE_DEPTH = 512 // Twiddle Factor ROM 깊이
 ) (
-    input logic clk,
-    input logic rst_n,
-    input logic enable_fft, // FFT 시작/진행을 제어하는 enable 신호
+    input clk,
+    input rst_n,
+    input di_en_saturation, // FFT 시작/진행을 제어하는 enable 신호
 
-    input logic signed [DATA_IN_WIDTH:0] bfly02_tmp_real_in [0:NUM_PARALLEL_PATHS-1], 
-    input logic signed [DATA_IN_WIDTH:0] bfly02_tmp_imag_in [0:NUM_PARALLEL_PATHS-1],
+    input signed [DATA_IN_WIDTH:0] bfly02_tmp_real_in [0:NUM_PARALLEL_PATHS-1], 
+    input signed [DATA_IN_WIDTH:0] bfly02_tmp_imag_in [0:NUM_PARALLEL_PATHS-1],
 
-    output logic signed [OWIDTH-1:0] do_re [0:NUM_PARALLEL_PATHS-1], // NUM_PARALLEL_PATHS 사용
-    output logic signed [OWIDTH-1:0] do_im [0:NUM_PARALLEL_PATHS-1], // NUM_PARALLEL_PATHS 사용
-    output logic do_en,
-    output logic [4:0] do_index [0:NUM_PARALLEL_PATHS-1] // NUM_PARALLEL_PATHS 사용
+    output signed [OWIDTH-1:0] do_re [0:NUM_PARALLEL_PATHS-1], // NUM_PARALLEL_PATHS 사용
+    output signed [OWIDTH-1:0] do_im [0:NUM_PARALLEL_PATHS-1], // NUM_PARALLEL_PATHS 사용
+    output do_en,
+    output [4:0] do_index [0:NUM_PARALLEL_PATHS-1] // NUM_PARALLEL_PATHS 사용
 );
     // 신호
     // 구문 오류 수정: 콤마(,) -> 세미콜론(;)
@@ -44,53 +44,53 @@ module top_module_02_cbfp #(
     // FFT 진행 제어를 위한 카운터 및 상태 변수
     localparam NUM_CHUNKS = BLOCK_SIZE / NUM_PARALLEL_PATHS; // 512 / 16 = 32로 변경
     logic [$clog2(NUM_CHUNKS)-1:0] chunk_idx; // 현재 처리 중인 16개 데이터 묶음의 인덱스 (0에서 31까지)
-    logic fft_start_reg; // enable_fft의 레지스터 버전 (안정성)
+    logic di_en; // di_en_saturation의 레지스터 버전 (안정성)
     
     // FFT 완료 신호
-    logic fft_done_reg; // 내부 fft_done 레지스터
+    logic done_chunk; // 내부 fft_done 레지스터
 
     // ============= FFT 제어 로직 및 주소 생성 ==============
-    // enable_fft의 이전 값 (FFT 시작 엣지 검출용)
-    logic enable_fft_d1; 
-    assign fft_done = fft_done_reg; 
+    // di_en_saturation의 이전 값 (FFT 시작 엣지 검출용)
+    logic di_en_saturation_d1; 
+    assign fft_done = done_chunk; 
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             chunk_idx     <= 0; 
-            fft_start_reg <= 0;      // 0으로 리셋 [cite: 16]
-            fft_done_reg  <= 0; 
-            enable_fft_d1 <= 0; 
+            di_en <= 0;      // 0으로 리셋 [cite: 16]
+            done_chunk  <= 0; 
+            di_en_saturation_d1 <= 0; 
         end else begin
-            // enable_fft_d1은 enable_fft를 한 클럭 지연시킨 값
-            enable_fft_d1 <= enable_fft; 
-            // FFT 시작 조건: enable_fft가 0->1로 전이될 때 (현재 1이고 이전 클럭에서 0이었다면)
-            if (enable_fft && !enable_fft_d1) begin // 이것이 상승 에지 검출입니다. [cite: 20]
+            // di_en_saturation_d1은 di_en_saturation를 한 클럭 지연시킨 값
+            di_en_saturation_d1 <= di_en_saturation; 
+            // FFT 시작 조건: di_en_saturation가 0->1로 전이될 때 (현재 1이고 이전 클럭에서 0이었다면)
+            if (di_en_saturation && !di_en_saturation_d1) begin // 이것이 상승 에지 검출입니다. [cite: 20]
                 chunk_idx     <= 0; 
-                fft_done_reg  <= 0; 
-                fft_start_reg <= 1; 
+                done_chunk  <= 0; 
+                di_en <= 1; 
             end
-            // FFT 진행 중: enable_fft가 1이고, fft_done이 아직 1이 아닐 때
-            else if (enable_fft && !fft_done_reg) begin
+            // FFT 진행 중: di_en_saturation가 1이고, fft_done이 아직 1이 아닐 때
+            else if (di_en_saturation && !done_chunk) begin
                 if (chunk_idx == NUM_CHUNKS - 1) begin // 마지막 청크까지 처리 완료
                     chunk_idx     <= 0; 
-                    fft_done_reg  <= 1; 
-                    fft_start_reg <= 0; 
+                    done_chunk  <= 1; 
+                    di_en <= 0; 
                 end else begin
                     chunk_idx <= chunk_idx + 1; 
-                    fft_done_reg <= 0; 
-                    fft_start_reg <= 1; // 계속 진행 중임을 나타냄 
+                    done_chunk <= 0; 
+                    di_en <= 1; // 계속 진행 중임을 나타냄 
                 end
             end
-            // FFT 완료 후 enable_fft가 0이 되면 리셋
-            else if (!enable_fft && fft_done_reg) begin
-                fft_done_reg  <= 0; 
-                fft_start_reg <= 0; // 리셋 
+            // FFT 완료 후 di_en_saturation가 0이 되면 리셋
+            else if (!di_en_saturation && done_chunk) begin
+                done_chunk  <= 0; 
+                di_en <= 0; // 리셋 
             end
-            // enable_fft가 0이고 fft_done_reg가 0인 경우, 또는 fft_done_reg가 1인 상태에서 enable_fft가 1로 유지되는 경우
+            // di_en_saturation가 0이고 done_chunk가 0인 경우, 또는 done_chunk가 1인 상태에서 di_en_saturation가 1로 유지되는 경우
             // 다른 조건에 해당하지 않으면 값 유지
             else begin
-                fft_start_reg <= fft_start_reg; 
-                fft_done_reg <= fft_done_reg; 
+                di_en <= di_en; 
+                done_chunk <= done_chunk; 
             end
         end
     end
@@ -154,7 +154,7 @@ module top_module_02_cbfp #(
 
     .di_re(pre_bfly02_re),
     .di_im(pre_bfly02_im),
-    .di_en(fft_start_reg), // FFT 완료 시점에 CBFP를 enable
+    .di_en(di_en), // FFT 완료 시점에 CBFP를 enable
 
     .do_re(do_re),
     .do_im(do_im),
