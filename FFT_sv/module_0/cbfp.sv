@@ -14,7 +14,9 @@ module cbfp #(
     output logic signed [OWIDTH-1:0] do_re [0:15],
     output logic signed [OWIDTH-1:0] do_im [0:15],
     output logic do_en,
-    output logic [4:0] do_index [0:15]
+    // output logic [4:0] do_index [0:15]
+    output logic [4:0] do_index_re [0:15], // 실수부 스케일링 인덱스
+    output logic [4:0] do_index_im [0:15] // 허수부 스케일링 인덱스
 );
 
 logic signed [WIDTH-1:0] db_do_re [0:15];
@@ -54,7 +56,7 @@ always_ff @(posedge clk or negedge rstn) begin
     end
 end
 
-delaybuffer #(.DEPTH(64+16), .WIDTH(WIDTH)) db1 (
+delaybuffer_cbfp #(.DEPTH(64+16), .WIDTH(WIDTH)) db1 (
     .rstn (rstn),
     .clk  (clk),
     .di_re(di_re),
@@ -270,12 +272,23 @@ for (i=0; i<16; i=i+1) begin
     assign do_re[i] = shift_re[i][WIDTH-12-1:0];
     assign do_im[i] = shift_im[i][WIDTH-12-1:0];
 
-    always_ff @(posedge clk or negedge rstn) begin
-        if (~rstn) begin
-            do_index[i] <= 'h0;
-        end else begin
-        do_index[i] <= min_value;
-        end
+//     always_ff @(posedge clk or negedge rstn) begin
+//         if (~rstn) begin
+//             do_index[i] <= 'h0;
+//         end else begin
+//         do_index[i] <= min_value;
+//         end
+//     end
+ end
+
+always_ff @(posedge clk or negedge rstn) begin
+    if (~rstn) begin
+        do_index_re[i] <= 'h0;
+        do_index_im[i] <= 'h0;
+    end else begin
+        // 여기서는 min_value 대신 각 실수부/허수부의 최소 인덱스를 할당
+        do_index_re[i] <= comp_do_re2; // 각 병렬 경로에 해당하는 comp_do_re2를 할당해야 합니다.
+        do_index_im[i] <= comp_do_im2; // 각 병렬 경로에 해당하는 comp_do_im2를 할당해야 합니다.
     end
 end
 
