@@ -1,0 +1,124 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'sdf1' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : sdf1
+Version: V-2023.12-SP5-4
+Date   : Wed Jul 30 18:01:43 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: do_count_reg_3_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: cbfp1/SAT_BUF_1CLK/buf_im_reg_3__5_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: cnt_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock cnt_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  do_count_reg_3_/CLK (SC7P5T_SDFFRQX4_S_CSC20L)          0.00       0.00 r
+  do_count_reg_3_/Q (SC7P5T_SDFFRQX4_S_CSC20L)           54.50      54.50 f
+  U13393/Z (SC7P5T_NR2X6_CSC20L)                         11.84      66.35 r
+  U13192/Z (SC7P5T_ND2X8_CSC20L)                         15.81      82.16 f
+  U28068/Z (SC7P5T_ND2X4_CSC20L)                         11.14      93.29 r
+  U21046/Z (SC7P5T_OAI211X6_CSC20L)                      24.66     117.95 f
+  bf1_1/in_en (butterfly_WIDTH9)                          0.00     117.95 f
+  bf1_1/U374/Z (SC7P5T_INVX16_CSC20L)                    29.29     147.24 r
+  bf1_1/U1225/Z (SC7P5T_INVX20_CSC20L)                   21.95     169.18 f
+  bf1_1/U532/Z (SC7P5T_OAI211X2_CSC20L)                  19.59     188.77 r
+  bf1_1/U530/Z (SC7P5T_ND2X3_CSC20L)                     16.93     205.70 f
+  bf1_1/U971/Z (SC7P5T_AOI21IAX2_CSC20L)                 14.40     220.10 r
+  bf1_1/U1565/Z (SC7P5T_XNR2X2_CSC20L)                   33.77     253.87 f
+  bf1_1/U2082/Z (SC7P5T_NR2IAX2_CSC20L)                  18.38     272.25 f
+  bf1_1/y0_im[123] (butterfly_WIDTH9)                     0.00     272.25 f
+  U19513/Z (SC7P5T_BUFX1_A_CSC20L)                       20.22     292.47 f
+  U19529/Z (SC7P5T_XNR2X2_CSC20L)                        32.80     325.27 r
+  U20366/Z (SC7P5T_OAI22X1_CSC20L)                       15.59     340.87 f
+  bf1_2/x0_re[123] (butterfly_WIDTH10)                    0.00     340.87 f
+  bf1_2/U1532/Z (SC7P5T_CKAN2ICLKX4_P_CSC20L)            27.60     368.46 f
+  bf1_2/U1531/Z (SC7P5T_OR2X4_A_CSC20L)                  21.81     390.28 f
+  bf1_2/U983/Z (SC7P5T_AOI21X1_MR_CSC20L)                15.12     405.39 r
+  bf1_2/U1905/Z (SC7P5T_XNR2X2_CSC20L)                   35.41     440.81 f
+  bf1_2/U1196/Z (SC7P5T_NR2X1_MR_CSC20L)                 13.67     454.48 r
+  bf1_2/y0_re[136] (butterfly_WIDTH10)                    0.00     454.48 r
+  U17327/Z (SC7P5T_AOI21X2_CSC20L)                       20.00     474.47 f
+  U26856/Z (SC7P5T_OAI21X6_CSC20L)                       21.21     495.68 r
+  U26885/S (SC7P5T_FAX2_A_CSC20L)                        56.28     551.96 f
+  U26886/S (SC7P5T_FAX2_A_CSC20L)                        55.49     607.45 r
+  U10965/Z (SC7P5T_AO21IAX2_CSC20L)                      26.96     634.41 r
+  U26891/CO (SC7P5T_FAX2_A_CSC20L)                       37.60     672.01 r
+  U19527/Z (SC7P5T_INVX2_CSC20L)                         11.70     683.70 f
+  U14062/S (SC7P5T_HAX4_CSC20L)                          37.10     720.80 r
+  U9498/Z (SC7P5T_OR2X4_P_CSC20L)                        21.49     742.30 r
+  U9475/Z (SC7P5T_INVX3_CSC20L)                           6.94     749.24 f
+  U12128/Z (SC7P5T_OAI21X3_CSC20L)                       13.25     762.49 r
+  U19303/Z (SC7P5T_AOI21X2_CSC20L)                       16.97     779.46 f
+  U19302/Z (SC7P5T_BUFX8_A_CSC20L)                       19.64     799.10 f
+  U19522/Z (SC7P5T_OAI21X2_CSC20L)                       15.21     814.31 r
+  U19521/Z (SC7P5T_XNR2X2_CSC20L)                        27.45     841.76 f
+  U13706/Z (SC7P5T_AN2X4_CSC20L)                         15.51     857.27 f
+  U18910/Z (SC7P5T_INVX4_CSC20L)                          6.40     863.67 r
+  U13621/Z (SC7P5T_OAI21X2_CSC20L)                        9.73     873.39 f
+  U13259/Z (SC7P5T_ND2X2_CSC20L)                          8.10     881.49 r
+  U10318/Z (SC7P5T_AN2X2_A_CSC20L)                       22.30     903.79 r
+  U30453/S (SC7P5T_HAX2_CSC20L)                          41.51     945.30 f
+  U21697/Z (SC7P5T_INVX2_CSC20L)                          9.25     954.55 r
+  U13261/Z (SC7P5T_XOR2X2_CSC20L)                        37.37     991.92 f
+  U21993/Z (SC7P5T_ND2X2_CSC20L)                         10.62    1002.54 r
+  U30637/Z (SC7P5T_OAI21X1_CSC20L)                       14.51    1017.05 f
+  U17971/Z (SC7P5T_AOI21X1_MR_CSC20L)                    17.40    1034.45 r
+  U30638/Z (SC7P5T_OAI21X2_CSC20L)                       16.10    1050.55 f
+  U30647/Z (SC7P5T_XNR2X1_CSC20L)                        34.63    1085.18 r
+  U13658/Z (SC7P5T_MUX2X2_CSC20L)                        30.96    1116.13 r
+  bf1_3/x0_im[167] (butterfly_WIDTH13)                    0.00    1116.13 r
+  bf1_3/U146/Z (SC7P5T_CKAN2ICLKX4_P_CSC20L)             24.25    1140.38 r
+  bf1_3/U1292/Z (SC7P5T_NR2X3_CSC20L)                     9.07    1149.45 f
+  bf1_3/U299/Z (SC7P5T_OR2X2_A_CSC20L)                   20.77    1170.22 f
+  bf1_3/U2278/Z (SC7P5T_OA21IAX2_CSC20L)                 23.54    1193.77 f
+  bf1_3/U507/Z (SC7P5T_INVX3_CSC20L)                     10.84    1204.61 r
+  bf1_3/U2279/Z (SC7P5T_OA21IAX2_CSC20L)                  9.06    1213.67 f
+  bf1_3/U2280/Z (SC7P5T_AOI211X3_CSC20L)                 17.08    1230.75 r
+  bf1_3/y0_im[180] (butterfly_WIDTH13)                    0.00    1230.75 r
+  U10383/Z (SC7P5T_AO21IAX2_CSC20L)                      27.58    1258.33 r
+  U10382/Z (SC7P5T_ND3X3_CSC20L)                         17.25    1275.58 f
+  cbfp1/bfly02_tmp_imag_in[180] (top_module_02_cbfp_NUM_PARALLEL_PATHS16_OWIDTH11_BLOCK_SIZE512_DATA_IN_WIDTH13_TW_WIDTH9_TW_TABLE_DEPTH512)
+                                                          0.00    1275.58 f
+  cbfp1/SATURATION_13/bfly02_tmp_imag_in[180] (saturation_LENGTH13_NUM_PARALLEL_PATHS16)
+                                                          0.00    1275.58 f
+  cbfp1/SATURATION_13/U378/Z (SC7P5T_ND2IAX6_CSC20L)     26.11    1301.68 f
+  cbfp1/SATURATION_13/U643/Z (SC7P5T_ND2X1_MR_CSC20L)    11.52    1313.20 r
+  cbfp1/SATURATION_13/U644/Z (SC7P5T_ND2X1_MR_CSC20L)    11.42    1324.62 f
+  cbfp1/SATURATION_13/bfly02_tmp_imag_saturated[161] (saturation_LENGTH13_NUM_PARALLEL_PATHS16)
+                                                          0.00    1324.62 f
+  cbfp1/SAT_BUF_1CLK/di_im[161] (delaybuffer_cbfp_DEPTH32_WIDTH13)
+                                                          0.00    1324.62 f
+  cbfp1/SAT_BUF_1CLK/buf_im_reg_3__5_/D (SC7P5T_SDFFRQX1_S_CSC20L)
+                                                          0.00    1324.62 f
+  data arrival time                                               1324.62
+
+  clock cnt_clk (rise edge)                            1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                     -50.00    1350.00
+  cbfp1/SAT_BUF_1CLK/buf_im_reg_3__5_/CLK (SC7P5T_SDFFRQX1_S_CSC20L)
+                                                          0.00    1350.00 r
+  library setup time                                    -25.30    1324.70
+  data required time                                              1324.70
+  --------------------------------------------------------------------------
+  data required time                                              1324.70
+  data arrival time                                              -1324.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+1

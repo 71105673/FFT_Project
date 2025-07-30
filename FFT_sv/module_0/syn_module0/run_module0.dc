@@ -1,0 +1,1 @@
+dc_shell -f module0.tcl | tee run.log

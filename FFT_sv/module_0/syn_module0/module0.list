@@ -1,0 +1,17 @@
+lappend search_path ../verilog/module0
+
+set net_list [list \
+    cbfp.sv \
+    complex_multiplier_02.sv \
+    twiddle_512.sv \
+    delaybuffer_cbfp.sv \
+    saturation.sv \
+    top_module_02_cbfp.sv \
+    shift_reg.sv \
+    butterfly.sv \
+    delay_buf.sv \
+    sdf1.sv \
+]
+
+analyze -format sverilog -library WORK $net_list
+
