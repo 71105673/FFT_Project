@@ -1,4 +1,0 @@
-vcs -full64 -sverilog -kdb -debug_access+all+reverse \
-    reorder_4.sv butterfly.sv butterfly2.sv cbfp.sv cbfp1.sv complex_multiplier_02.sv complex_multiplier_12.sv delay_buf.sv delaybuffer_cbfp.sv delaybuffer_re.sv fft_top.sv saturation.sv sdf1.sv sdf2.sv sdf3.sv shift_reg.sv tb_fft_top.sv top_module_02_cbfp.sv top_module_12_cbfp.sv twiddle_512.sv twiddle_64.sv butterfly_16bit.sv
-./simv -verdi &
-

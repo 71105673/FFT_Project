@@ -1,3 +1,0 @@
-Command Line: /tools/synopsys/verdi/W-2024.09-SP2/platform/LINUXAMD64/bin/Novas -i -simflow -simBin ./simv -simOpt  
-uname(Linux kccisynop2 5.14.0-427.13.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Apr 10 10:29:16 EDT 2024 x86_64)
-au time 3167.235257 15.896578 3.429506 delta 456642560 456642560 total 1302564864 1302564864

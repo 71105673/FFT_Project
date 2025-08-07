@@ -1,0 +1,27 @@
+lappend search_path ../verilog/fft_v3/
+
+set net_list "\
+../verilog/fft_v3/fft_top.sv \
+../verilog/fft_v3/butterfly.sv \
+../verilog/fft_v3/twiddle_64.sv \
+../verilog/fft_v3/twiddle_512.sv \
+../verilog/fft_v3/top_module_12_cbfp.sv \
+../verilog/fft_v3/top_module_02_cbfp.sv \
+../verilog/fft_v3/shift_reg.sv \
+../verilog/fft_v3/sdf3.sv \
+../verilog/fft_v3/sdf2.sv \
+../verilog/fft_v3/sdf1.sv \
+../verilog/fft_v3/saturation.sv \
+../verilog/fft_v3/reorder_4.sv \
+../verilog/fft_v3/delaybuffer_re.sv \
+../verilog/fft_v3/delaybuffer_cbfp.sv \
+../verilog/fft_v3/delay_buf.sv \
+../verilog/fft_v3/complex_multiplier_02.sv \
+../verilog/fft_v3/complex_multiplier_12.sv \
+../verilog/fft_v3/butterfly_16bit.sv \
+../verilog/fft_v3/butterfly2.sv \
+../verilog/fft_v3/cbfp.sv \
+../verilog/fft_v3/cbfp1.sv \
+"
+
+analyze -format sverilog -library WORK $net_list
