@@ -15,7 +15,7 @@
 ### 📋 시스템 구성
 
 ```
-📁 FFT_sv/
+📁 FFT_ASIC/
 ├── 📁RTL   # RTL Level Module 저장소
 │   ├── Module0
 │   │      └── sdf1.sv
