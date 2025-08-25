@@ -1,12 +1,5 @@
 # FFT_Project
 
-이 저장소는 **SystemVerilog 기반 512포인트 FFT 프로세서**를 **Convergent Block Floating Point(CBFP)** 방식으로 구현한 프로젝트입니다.  
-FPGA 플랫폼에서 동작하도록 설계되었으며(Vivado 2020.2 테스트 완료), 고성능과 파이프라인 처리에 중점을 두었습니다.
-
-## 프로젝트 개요
-
-# FFT_Project
-
 이 프로젝트는 **SystemVerilog 기반 512포인트 FFT 프로세서**를 **Convergent Block Floating Point (CBFP)** 방식으로 구현한 FPGA 설계 프로젝트입니다.  
 Vivado 2020.2 환경에서 테스트되었으며, **고성능 연산과 파이프라인 처리**에 중점을 두었습니다.
 
