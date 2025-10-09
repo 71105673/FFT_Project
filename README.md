@@ -1,18 +1,93 @@
-# FFT_Project# FFT_Project
+# FFT_Project
 
-### MATLAB
+이 프로젝트는 **SystemVerilog 기반 512포인트 FFT 프로세서**를 **Convergent Block Floating Point (CBFP)** 방식으로 구현한 FPGA 설계 프로젝트입니다.  
+Vivado 2020.2 환경에서 테스트되었으며, **고성능 연산과 파이프라인 처리**에 중점을 두었습니다.
 
-**FFT_M**
+---
 
-└── fft_fixed_3** -> 작성한 메인 fixed code
+## 팀원
+| 정민교 | 엄찬하 | 신상학 | 임재홍 |
+|--------|--------|--------|--------|
+| -Team Leader <br> -Algorithm Designer | -RTL Design Engineer <br> -Algorithm Designer | RTL Design Engineer | RTL Design Engineer |
+| <img src="image/profile/민교.png" width="240" height="160"> | <img src="image/profile/엄찬하.JPG" width="240" height="160"> | <img src="image/profile/상학.png" width="240" height="160"> | <img src="image/profile/재홍.png" width="240" height="160"> |
 
-**FFT_Pro_M**
 
-└── CBFP를 적용한 Module
+### 정민교 
+- Tram Leader <br>
+- Butterfly Calculation Module RTL Desgin <br> 
+- FPGA targeting
 
-## System Verilog
+### 엄찬하 
+- DSP Algorithm Analysis <br>
+- BFP-based FFT Fixed point modeling <br>
+- CBFP Module RTL Desgin <br>
+- Bit reverse RTL Desgin <br>
 
-### 📋 시스템 구성
+### 신상학 
+- CBFP Module RTL Desgin <br>
+- Butterfly Calculation Module & Bit reverse RTL Desgin
+
+### 임재홍 
+- Gate simulation & Debugging
+
+
+## 프로젝트 개요
+
+
+본 프로젝트는 **N = 512 포인트 FFT**를 CBFP 방식으로 구현한 FPGA 설계입니다.  
+FFT 프로세서는 다음 기능을 수행합니다:
+
+- **FFT 처리** 및 CBFP 스케일링
+- **Twiddle Factor를 이용한 복소수 곱 연산**
+- **Leading Zero Detection**을 통한 정규화
+- **Fixed-point 연산** 
+- **파이프라인 아키텍처** 적용으로 고속 연산 달성
+- **연속 읽기/쓰기 가능 구조**로 안정적인 데이터 처리
+
+FPGA 구현에 최적화되어 있으며, **자원 사용, 타이밍, 연산 정확도**를 균형 있게 설계했습니다.
+
+
+## 💻 개발 환경
+
+| 구분        | 사용 도구 / 언어 |
+|-------------|------------------|
+| **EDA Tools** | Xilinx Vivado HLx Editions, Synopsys VCS, Synopsys Verdi |
+| **Languages** | SystemVerilog, MATLAB |
+| **IDE / Tools** | Visual Studio Code, MobaXterm |
+
+
+---
+
+## 주요 특징
+
+- **모듈화 설계**: Twiddle 곱셈, 정규화, 버퍼링 모듈 분리
+- **Fixed-point 정밀도 유지**: 부동소수점 연산 없이 CBFP FFT 정확도 확보
+- **테스트벤치 제공**: 512 샘플 입력으로 기능 검증
+- **출력 검증**: 정규화된 FFT 출력값과 인덱스를 파일로 기록
+
+---
+
+## 학습 포인트
+
+- **CBFP 스케일링 적용**: 블록 기반 FFT에서 정밀도 유지
+- **파이프라인 Fixed-point 모듈 설계**로 타이밍 제약 충족
+- **FPGA 최적화 경험**: 리소스 배분, 병렬 처리 설계
+- **SystemVerilog 모듈화 설계 및 검증 경험** 습득
+- MATLAB 기반 **Fixed-point 코드와 모듈화 설계 연계**
+
+---
+
+## MATLAB 구성
+
+- **FFT_M**  
+  - `fft_fixed_3` → 메인 Fixed-point 코드
+- **FFT_Pro_M**  
+  - CBFP 적용 Module 설계
+
+---
+
+
+## 📋 System Verilog 시스템 구성
 
 ```
 📁 FFT_ASIC/
@@ -47,3 +122,5 @@
 └── 📁 schematic    
 
 ```
+## 참고
+자세한 내용은 PPT를 확인해 주세요
