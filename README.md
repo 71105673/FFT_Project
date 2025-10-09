@@ -30,11 +30,17 @@ Vivado 2020.2 환경에서 테스트되었으며, **고성능 연산과 파이�
 ### 임재홍 
 - Gate simulation & Debugging
 
+---
 
 ## 프로젝트 개요
 
 
 본 프로젝트는 **N = 512 포인트 FFT**를 CBFP 방식으로 구현한 FPGA 설계입니다.  
+
+본 프로젝트에서는 BFP(Block Floating Point) 기반 Radix-2² 구조의 FFT를 대상으로 MATLAB 환경에서 Floating 모델을 Q-format 기반 Fixed-point 모델로 변환하여 알고리즘 수준의 사전 검증(High-level verification) 을 수행하였다. 이어서 CBFP(Combined Block Floating Point) 모델의 Fixed-point 구현을 적용하여 BFP와 CBFP 알고리즘 간 성능을 비교하였다.
+
+CBFP 모델을 기반으로 RTL 설계 및 합성을 진행하고, 이를 통해 setup time violation, Area, Latency 등의 특성을 분석하였다. 마지막으로 게이트 레벨 시뮬레이션과 FPGA Targeting을 수행하여 RTL 설계의 기능적 타당성을 검증하였다.
+
 FFT 프로세서는 다음 기능을 수행합니다:
 
 - **FFT 처리** 및 CBFP 스케일링
@@ -55,6 +61,25 @@ FPGA 구현에 최적화되어 있으며, **자원 사용, 타이밍, 연산 정
 | **Languages** | SystemVerilog, MATLAB |
 | **IDE / Tools** | Visual Studio Code, MobaXterm |
 
+### 모델링 및 알고리즘 설계
+ - **MATLAB** (Floating/Fixed-point 모델링 및 High-level verification)
+ 
+### 시뮬레이션 및 검증
+- Synopsys VCS (RTL 및 게이트 레벨 논리 시뮬레이션)
+- Synopsys Verdi (파형 분석 및 디버깅)
+
+### 개발 툴 및 편집기
+- MobaXterm (원격 개발 환경)
+- Visual Studio Code (RTL 및 스크립트 편집)
+
+### 합성 및 게이트 시뮬레이션
+- Synopsys Design Compiler (합성)
+- Synopsys VCS/Verdi (게이트 레벨 시뮬레이션)
+### FPGA 타겟팅
+- Xilinx Vivado (Bitstream 생성)
+
+### 하드웨어 플랫폼
+-Avnet UltraZed-7EV Carrier Card
 
 ---
 
