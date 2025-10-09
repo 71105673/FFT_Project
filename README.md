@@ -21,11 +21,12 @@ Vivado 2020.2 환경에서 테스트되었으며, **고성능 연산과 파이�
 - DSP Algorithm Analysis <br>
 - BFP-based FFT Fixed point modeling <br>
 - CBFP Module RTL Desgin <br>
-- Twiddle Factor Design <br>
+- Twiddle Factor ROM Design <br>
 - Bit reverse RTL Desgin <br>
 
 ### 신상학 
 - CBFP Module RTL Desgin <br>
+- Twiddle Factor ROM Design <br>
 - Butterfly Calculation Module & Bit reverse RTL Desgin
 
 ### 임재홍 
