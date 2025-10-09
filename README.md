@@ -552,15 +552,6 @@ comp_min_cbfp comp_im1 (
 🎉 Matlab을 통해 예측한 결과와 같음을 확인할 수 있다.  <br>
 ☑️ FPGA와 연결하기 위해 Cosine Input을 8clk 쉬고 다시 반복하도록 설계하여 출력이 진행될 때도 Input Data가 입력되는 것을 확인할 수 있다.
 
-#### din
-![alt text](image/profile/Sim/din.png)
-
-#### dout
-![alt text](image/profile/Sim/Dout.png)
-
-#### in -> Out까지 첫 출력 시간
-![alt text](image/profile/Sim/outclk.png)
-
 ## (3) Synthesis
 
 |Setup_time| Area|
@@ -573,3 +564,155 @@ Timing_max| Area
 |<img src="image/Syn/slack.png" width=400>| <img src="image/Syn/Area.png" width=400>|
 
 > Hold time은 Layout 단계에서 충분히 해결 가능하므로 front-end 과정에서는 Setup time과 Area 최적화에 집중하였다.
+
+## (4) Gate Simulation
+
+### 🔍 TestBench: Vectorization / Flattening
+
+```systemverilog
+logic signed [0:143] din_re;
+logic signed [0:143] din_im;
+logic [0:207] dout_re;  
+logic [0:207] dout_im;
+```
+
+#### 🤔 다차원 배열을 1차원 벡터로 변환하는 것의 필요성
+
+:one: **게이트 시뮬레이션에서 배열 제한:** 
+- 일부 EDA 툴이나 합성된 netlist는 배열을 직접 시뮬레이션할 수 없음.
+ 
+:two: **배선 단순화:** 
+- 모든 요소를 하나의 연속된 vector로 바꾸면, 모듈 간 연결이 간단해짐.
+
+:three: **자동화 가능:** 
+- Testbench에서 반복문으로 배열을 채우던 로직을 벡터 슬라이스로 처리 가능.
+
+
+```systemverilog
+logic signed [8:0] din_re_arr [0:15];
+logic signed [8:0] din_im_arr [0:15];
+logic signed [12:0] dout_re_arr [0:15];
+logic signed [12:0] dout_im_arr [0:15];
+```
+
+- 사용자의 편의를 위해 RTL 배열를 추가하여 Waveform에서의 가독성을 높였다.
+
+
+### 😎 Gate Simulation
+
+### ☑️ Latency: 91clk
+
+|<img src="image/profile/Sim/outclk.png" width=600>|
+|--|
+
+|Input: 32 clk(32 x 16 = 512 points)  |Output: 32 clk(32 x 16 = 512 points) |
+|--|--|
+|<img src="image/profile/Sim/din.png" width=500>|<img src="image/profile/Sim/Dout.png" width=500>|
+
+### ✅ Cosine_Input
+
+|<img src="image/profile/Gate/cos_in.png" width=1000>|
+|--|
+
+#### ➡️ [Matlab] First 32 Input Data Points
+
+| Real | 63 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 63 | 63 | 63 | 63 | 63 | 63 | 63 | 62 | 62 | 62 | 62 | 62 | 61 | 61 | 61 | 61 | 61 | 60 | 60 | 60 | 59 | ··· |
+|------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| **IMG** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **···** |
+
+
+|<img src="image/profile/Gate/cos_in_la.png" width=1000>|
+|--|
+
+#### ➡️[Matlab] Last 32 Input Data Points
+
+
+| Real | ··· | 59 | 59 | 60 | 60 | 60 | 61 | 61 | 61 | 61 | 61 | 62 | 62 | 62 | 62 | 62 | 63 | 63 | 63 | 63 | 63 | 63 | 63 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 64 | 64 |
+|------|-----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| **IMG** | **···** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** |
+
+
+
+### ✅ Cosine_Output
+|<img src="image/profile/Gate/cos_out.png" width=1000>|
+|--|
+
+#### ➡️[Matlab] First 32 Output Data Points
+
+| Real | -1 | 4091 | -1 | 2 | -1 | 2 | -1 | -3 | -1 | -4 | -1 | -1 | -1 | 3 | -1 | 3 | -1 | -1 | -1 | -1 | -1 | -2 | -1 | 2 | -1 | -1 | -1 | -4 | -1 | -1 | -1 | 0 | ··· |
+|------|----|------|----|---|----|---|----|----|----|----|----|----|----|---|----|---|----|----|----|----|----|----|----|---|----|---|----|----|----|----|----|----|----|
+| **IMG** | **0** | **-6** | **0** | **-1** | **0** | **-1** | **0** | **-4** | **0** | **0** | **0** | **-1** | **0** | **-1** | **0** | **1** | **0** | **0** | **0** | **-1** | **0** | **-1** | **0** | **-1** | **0** | **0** | **0** | **-1** | **0** | **0** | **0** | **0** | ··· |
+
+
+|<img src="image/profile/Gate/cos_out_la.png" width=1000>|
+|--|
+
+#### ➡️ [Matlab] Last 32 Output Data Points
+
+
+| Real | ··· | -1 | 1 | -1 | -1 | -1 | -4 | -1 | -1 | -1 | -1 | -1 | -2 | -1 | -1 | -1 | -1 | -1 | 3 | -1 | 3 | -1 | -1 | -1 | -5 | -1 | 2 | -1 | 2 | -1 | 2 | -1 | 4091 |
+|------|-----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|---|----|---|----|---|----|----|----|----|----|----|----|----|----|----|------|
+| **Imag** |  **···** | **0** | **1** | **0** | **-1** | **0** | **0** | **0** | **-2** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **-1** | **0** | **-1** | **0** | **0** | **0** | **0** | **0** | **2** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** |
+
+## (5) FPGA Targeting
+
+### Board 
+|Diagram|Board|
+| --- | --- |
+|<img src="image/profile/FPGA/block.png" width="400">|<img src="image/profile/FPGA/board.png" width="170">|
+
+### implementation
+|Setup-Hold|Pulse|
+| --- | --- |
+|<img src="image/profile/FPGA/timing.png" width="480">|<img src="image/profile/FPGA/pulse.png" width="340">|
+
+### Power
+![alt text](image/profile/FPGA/Power.png)
+
+
+## 진행 결과
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <thead>
+    <tr>
+      <th>구분</th>
+      <th>검증 항목</th>
+      <th>검증 요소</th>
+      <th>완료 여부</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">ASIC (500MHz)</td>
+      <td>RTL Simulation</td>
+      <td>Cosine, Random Fixed Data</td>
+      <td align="center">○</td>
+    </tr>
+    <tr>
+      <td>Synthesis</td>
+      <td>Setup Violation, Area</td>
+      <td align="center">○</td>
+    </tr>
+    <tr>
+      <td>Gate Simulation</td>
+      <td>Cosine, Random Fixed Data</td>
+      <td align="center">○</td>
+    </tr>
+    <tr>
+      <td rowspan="3">FPGA (100MHz)</td>
+      <td>FPGA top Block</td>
+      <td>Cosine generator, FFT, VIO</td>
+      <td align="center">○</td>
+    </tr>
+    <tr>
+      <td>RTL Simulation</td>
+      <td>Cosine Fixed Data</td>
+      <td align="center">○</td>
+    </tr>
+    <tr>
+      <td>Synthesis & Implementation</td>
+      <td>Setup Violation, Utilization, Bitstream</td>
+      <td align="center">○</td>
+    </tr>
+  </tbody>
+</table>
