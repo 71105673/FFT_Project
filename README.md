@@ -154,6 +154,8 @@ FPGA 구현에 최적화되어 있으며, **자원 사용, 타이밍, 연산 정
 ## 개발 과정
 
 ### (1) Fixed Point Modeling 
+|---|---|
+|![alt text](<image/profile/Fixed Point/BFP.png>) | ![alt text](<image/profile/Fixed Point/CBFP.png>) |
 
 - Float 모델은 정확한 실숫값들의 연산으로 알고리즘을 확인해 가며 원하는 출력을 만들어 내는지 시뮬레이션을 진행할 수 있습니다.
 
