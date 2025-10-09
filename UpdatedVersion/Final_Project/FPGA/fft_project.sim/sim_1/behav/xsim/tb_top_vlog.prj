@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../fft_project.gen/sources_1/ip/clk_wiz_0" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/cos_gen.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/counter.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/fft_top.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/module0.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/module0_cbfp.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/module1.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/module1_cbfp.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/module2.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/twf_m0.sv" \
+"../../../../fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv" \
+"../../../../fft_project.srcs/sim_1/imports/8.3 src/tb_cos_gen.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

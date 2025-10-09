@@ -1,0 +1,4 @@
+./shift_reg.sv
+./step1.sv
+./tb_step1.sv
+./num_counter.sv

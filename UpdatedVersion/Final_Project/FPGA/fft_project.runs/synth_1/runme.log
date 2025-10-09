@@ -1,0 +1,1486 @@
+
+*** Running vivado
+    with args -log top_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top_module.tcl -notrace
+Command: synth_design -top top_module -part xczu7ev-fbvb900-1-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-fbvb900-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14392
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1702.836 ; gain = 118.961
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_module' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/new/top_module.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/yubdirectory/fft_project/fft_project.runs/synth_1/.Xil/Vivado-22216-DESKTOP-7CFQ9ND/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [D:/yubdirectory/fft_project/fft_project.runs/synth_1/.Xil/Vivado-22216-DESKTOP-7CFQ9ND/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cos_gen' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cos_gen.sv:3]
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cos_gen.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'cos_gen' (2#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cos_gen.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fft_top' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/fft_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'step0_0' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000100000000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001001 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg' (3#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6157] synthesizing module 'step0_num_counter' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:29]
+	Parameter NUM bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'step0_num_counter' (4#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'step0_0' (5#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'step0_1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0.sv:125]
+INFO: [Synth 8-6157] synthesizing module 'step_num_counter' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:185]
+	Parameter NUM bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:214]
+INFO: [Synth 8-6155] done synthesizing module 'step_num_counter' (6#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:185]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg__parameterized0' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000010000000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001010 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg__parameterized0' (6#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg__parameterized1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000100000000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001010 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg__parameterized1' (6#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6155] done synthesizing module 'step0_1' (7#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0.sv:125]
+INFO: [Synth 8-6157] synthesizing module 'step0_2' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0.sv:297]
+INFO: [Synth 8-6157] synthesizing module 'step_num_counter__parameterized0' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:185]
+	Parameter NUM bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:214]
+INFO: [Synth 8-6155] done synthesizing module 'step_num_counter__parameterized0' (7#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:185]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg__parameterized2' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000001000000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000100 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg__parameterized2' (7#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg__parameterized3' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000010000000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg__parameterized3' (7#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6157] synthesizing module 'twf512' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m0.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'twf512' (8#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m0.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'step0_2' (9#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0.sv:297]
+INFO: [Synth 8-6157] synthesizing module 'module0_cbfp' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0_cbfp.sv:3]
+	Parameter cnt_size bound to: 5 - type: integer 
+	Parameter array_size bound to: 16 - type: integer 
+	Parameter array_num bound to: 4 - type: integer 
+	Parameter din_size bound to: 23 - type: integer 
+	Parameter dout_size bound to: 11 - type: integer 
+	Parameter buffer_depth bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cbfp_sr' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:78]
+	Parameter array_size bound to: 16 - type: integer 
+	Parameter din_size bound to: 23 - type: integer 
+	Parameter buffer_depth bound to: 64 - type: integer 
+	Parameter clk_cnt bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cbfp_sr' (10#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:78]
+INFO: [Synth 8-6157] synthesizing module 'fft_cbfp_cal_zero' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:3]
+	Parameter cnt_size bound to: 5 - type: integer 
+	Parameter array_size bound to: 16 - type: integer 
+	Parameter array_num bound to: 4 - type: integer 
+	Parameter din_size bound to: 23 - type: integer 
+	Parameter buffer_depth bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fft_cbfp_cal_zero' (11#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fft_output_shift' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:111]
+	Parameter cnt_size bound to: 5 - type: integer 
+	Parameter din_size bound to: 23 - type: integer 
+	Parameter dout_size bound to: 11 - type: integer 
+	Parameter array_num bound to: 4 - type: integer 
+	Parameter array_size bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fft_output_shift' (12#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:111]
+INFO: [Synth 8-6157] synthesizing module 'cbfp_sr_output' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:128]
+	Parameter array_size bound to: 16 - type: integer 
+	Parameter din_size bound to: 11 - type: integer 
+	Parameter buffer_depth bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cbfp_sr_output' (13#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:128]
+INFO: [Synth 8-6157] synthesizing module 'min_val' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0_cbfp.sv:386]
+INFO: [Synth 8-6155] done synthesizing module 'min_val' (14#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0_cbfp.sv:386]
+INFO: [Synth 8-6155] done synthesizing module 'module0_cbfp' (15#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module0_cbfp.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'step1_0' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg__parameterized4' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000000100000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001011 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg__parameterized4' (15#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6157] synthesizing module 'step10_num_counter' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:383]
+	Parameter NUM bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'step10_num_counter' (16#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:383]
+INFO: [Synth 8-6155] done synthesizing module 'step1_0' (17#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'step1_1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:148]
+INFO: [Synth 8-6157] synthesizing module 'step_num_counter__parameterized1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:185]
+	Parameter NUM bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:214]
+INFO: [Synth 8-6155] done synthesizing module 'step_num_counter__parameterized1' (17#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/counter.sv:185]
+INFO: [Synth 8-6157] synthesizing module 'shift11_reg' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:186]
+	Parameter FIX bound to: 32'sb00000000000000000000000000001100 
+INFO: [Synth 8-6155] done synthesizing module 'shift11_reg' (18#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:186]
+INFO: [Synth 8-6157] synthesizing module 'shift_reg__parameterized5' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+	Parameter N bound to: 32'sb00000000000000000000000000100000 
+	Parameter FIX bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'shift_reg__parameterized5' (18#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/shift_reg.sv:42]
+INFO: [Synth 8-6155] done synthesizing module 'step1_1' (19#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:148]
+INFO: [Synth 8-6157] synthesizing module 'step1_2' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:315]
+INFO: [Synth 8-6157] synthesizing module 'twf64' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:3]
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'twf64' (20#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'step1_2' (21#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:315]
+INFO: [Synth 8-6157] synthesizing module 'module1_cbfp' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1_cbfp.sv:3]
+	Parameter cnt_size bound to: 5 - type: integer 
+	Parameter array_size bound to: 16 - type: integer 
+	Parameter array_num bound to: 4 - type: integer 
+	Parameter din_size bound to: 25 - type: integer 
+	Parameter dout_size bound to: 12 - type: integer 
+	Parameter buffer_depth bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft_cbfp_cal_zero_m1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:167]
+	Parameter cnt_size bound to: 5 - type: integer 
+	Parameter array_size bound to: 8 - type: integer 
+	Parameter din_size bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fft_cbfp_cal_zero_m1' (22#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:167]
+INFO: [Synth 8-6157] synthesizing module 'fft_output_shift_m1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:265]
+	Parameter cnt_size bound to: 5 - type: integer 
+	Parameter din_size bound to: 25 - type: integer 
+	Parameter dout_size bound to: 12 - type: integer 
+	Parameter array_size bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fft_output_shift_m1' (23#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/cbfp_datapath.sv:265]
+INFO: [Synth 8-6155] done synthesizing module 'module1_cbfp' (24#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1_cbfp.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'index_sum' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:4]
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:41]
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:189]
+INFO: [Synth 8-6155] done synthesizing module 'index_sum' (25#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'step2_0' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:329]
+INFO: [Synth 8-6155] done synthesizing module 'step2_0' (26#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:329]
+INFO: [Synth 8-6157] synthesizing module 'step2_1' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:403]
+INFO: [Synth 8-6155] done synthesizing module 'step2_1' (27#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:403]
+INFO: [Synth 8-6157] synthesizing module 'step2_2' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:496]
+INFO: [Synth 8-6155] done synthesizing module 'step2_2' (28#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:496]
+INFO: [Synth 8-6157] synthesizing module 'index_reorder' [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:602]
+INFO: [Synth 8-226] default block is never used [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:713]
+INFO: [Synth 8-6155] done synthesizing module 'index_reorder' (29#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module2.sv:602]
+INFO: [Synth 8-6155] done synthesizing module 'fft_top' (30#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/fft_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'vio_fft' [D:/yubdirectory/fft_project/fft_project.runs/synth_1/.Xil/Vivado-22216-DESKTOP-7CFQ9ND/realtime/vio_fft_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_fft' (31#1) [D:/yubdirectory/fft_project/fft_project.runs/synth_1/.Xil/Vivado-22216-DESKTOP-7CFQ9ND/realtime/vio_fft_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FFT_TOP'. This will prevent further optimization [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/new/top_module.sv:44]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VIO_FFT'. This will prevent further optimization [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/new/top_module.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (32#1) [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/new/top_module.sv:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2863.273 ; gain = 1279.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2882.648 ; gain = 1298.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2882.648 ; gain = 1298.773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2882.648 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/yubdirectory/fft_project/fft_project.gen/sources_1/ip/vio_fft/vio_fft/vio_fft_in_context.xdc] for cell 'VIO_FFT'
+Finished Parsing XDC File [d:/yubdirectory/fft_project/fft_project.gen/sources_1/ip/vio_fft/vio_fft/vio_fft_in_context.xdc] for cell 'VIO_FFT'
+Parsing XDC File [d:/yubdirectory/fft_project/fft_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLK_GEN_100'
+Finished Parsing XDC File [d:/yubdirectory/fft_project/fft_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLK_GEN_100'
+Parsing XDC File [D:/yubdirectory/fft_project/fft_project.srcs/constrs_1/new/fft_top.xdc]
+Finished Parsing XDC File [D:/yubdirectory/fft_project/fft_project.srcs/constrs_1/new/fft_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/yubdirectory/fft_project/fft_project.srcs/constrs_1/new/fft_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 3117.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.422 . Memory (MB): peak = 3117.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 3118.621 ; gain = 1534.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-fbvb900-1-i
+INFO: [Synth 8-802] inferred FSM for state register 'shift_type_reg' in module 'step_num_counter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                 iSTATE1 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'shift_type_reg' using encoding 'one-hot' in module 'step_num_counter'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:01 ; elapsed = 00:02:02 . Memory (MB): peak = 3118.621 ; gain = 1534.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 104   
+	   2 Input   32 Bit       Adders := 68    
+	   2 Input   25 Bit       Adders := 24    
+	   2 Input   24 Bit       Adders := 8     
+	   5 Input   23 Bit       Adders := 8     
+	   2 Input   22 Bit       Adders := 16    
+	   5 Input   22 Bit       Adders := 32    
+	   5 Input   21 Bit       Adders := 64    
+	   2 Input   17 Bit       Adders := 16    
+	   3 Input   17 Bit       Adders := 16    
+	   2 Input   16 Bit       Adders := 32    
+	   3 Input   16 Bit       Adders := 32    
+	   3 Input   15 Bit       Adders := 16    
+	   2 Input   14 Bit       Adders := 48    
+	   3 Input   14 Bit       Adders := 48    
+	   3 Input   13 Bit       Adders := 80    
+	   2 Input   13 Bit       Adders := 48    
+	   2 Input   12 Bit       Adders := 48    
+	   3 Input   12 Bit       Adders := 32    
+	   2 Input   11 Bit       Adders := 32    
+	   3 Input   11 Bit       Adders := 32    
+	   2 Input   10 Bit       Adders := 48    
+	   3 Input   10 Bit       Adders := 32    
+	   2 Input    6 Bit       Adders := 18    
+	   2 Input    5 Bit       Adders := 7     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 5     
+	   2 Input    1 Bit       Adders := 3     
++---Registers : 
+	               25 Bit    Registers := 64    
+	               23 Bit    Registers := 320   
+	               16 Bit    Registers := 64    
+	               15 Bit    Registers := 32    
+	               14 Bit    Registers := 192   
+	               13 Bit    Registers := 1216  
+	               12 Bit    Registers := 704   
+	               11 Bit    Registers := 320   
+	               10 Bit    Registers := 896   
+	                9 Bit    Registers := 622   
+	                6 Bit    Registers := 68    
+	                5 Bit    Registers := 27    
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 45    
++---Muxes : 
+	   2 Input   23 Bit        Muxes := 64    
+	   2 Input   16 Bit        Muxes := 112   
+	   2 Input   14 Bit        Muxes := 96    
+	   2 Input   13 Bit        Muxes := 192   
+	   2 Input   12 Bit        Muxes := 192   
+	   3 Input   12 Bit        Muxes := 64    
+	   2 Input   11 Bit        Muxes := 256   
+	   3 Input   10 Bit        Muxes := 32    
+	   2 Input   10 Bit        Muxes := 48    
+	   4 Input    9 Bit        Muxes := 7     
+	   2 Input    9 Bit        Muxes := 47    
+	   4 Input    8 Bit        Muxes := 18    
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 164   
+	   2 Input    4 Bit        Muxes := 12    
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 6184  
+	   5 Input    1 Bit        Muxes := 512   
+	  32 Input    1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_6/\cnt_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cnt_reg[5] )
+INFO: [Synth 8-3886] merging instance 'real_index_reg[0][8]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[0][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[0][7]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[0][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[0][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[1][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[1][8]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[1][7]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[1][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[1][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][8]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][7]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][0]' (FDC) to 'real_index_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][1]' (FDC) to 'real_index_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][2]' (FDC) to 'real_index_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][3]' (FDC) to 'real_index_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[2][4]' (FDC) to 'real_index_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[3][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[3][8]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[3][7]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[3][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[3][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][8]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][7]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][6]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][0]' (FDC) to 'real_index_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][1]' (FDC) to 'real_index_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][2]' (FDC) to 'real_index_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][3]' (FDC) to 'real_index_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[4][4]' (FDC) to 'real_index_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][8]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][7]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][6]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][0]' (FDC) to 'real_index_reg[6][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][1]' (FDC) to 'real_index_reg[6][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][2]' (FDC) to 'real_index_reg[6][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][3]' (FDC) to 'real_index_reg[6][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[5][4]' (FDC) to 'real_index_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][8]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][7]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][6]' (FDC) to 'real_index_reg[7][8]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][0]' (FDC) to 'real_index_reg[7][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][1]' (FDC) to 'real_index_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][2]' (FDC) to 'real_index_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][3]' (FDC) to 'real_index_reg[7][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[6][4]' (FDC) to 'real_index_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[7][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[7][8]' (FDC) to 'real_index_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[7][7]' (FDC) to 'real_index_reg[7][6]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[7][5]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[7][6]' (FDC) to 'real_index_reg[8][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][8]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][7]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][5]' (FDC) to 'real_index_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][0]' (FDC) to 'real_index_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][1]' (FDC) to 'real_index_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][2]' (FDC) to 'real_index_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][3]' (FDC) to 'real_index_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[8][4]' (FDC) to 'real_index_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][8]' (FDC) to 'real_index_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][7]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][5]' (FDC) to 'real_index_reg[10][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][0]' (FDC) to 'real_index_reg[10][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][1]' (FDC) to 'real_index_reg[10][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][2]' (FDC) to 'real_index_reg[10][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][3]' (FDC) to 'real_index_reg[10][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[9][4]' (FDC) to 'real_index_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][8]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][7]' (FDC) to 'real_index_reg[10][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][5]' (FDC) to 'real_index_reg[11][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][0]' (FDC) to 'real_index_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][1]' (FDC) to 'real_index_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][2]' (FDC) to 'real_index_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][3]' (FDC) to 'real_index_reg[11][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[10][4]' (FDC) to 'real_index_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][9]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][8]' (FDC) to 'real_index_reg[11][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][7]' (FDC) to 'real_index_reg[11][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][5]' (FDC) to 'real_index_reg[12][5]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][6]' (FDC) to 'real_index_reg[12][9]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][0]' (FDC) to 'real_index_reg[12][0]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][1]' (FDC) to 'real_index_reg[12][1]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][2]' (FDC) to 'real_index_reg[12][2]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][3]' (FDC) to 'real_index_reg[12][3]'
+INFO: [Synth 8-3886] merging instance 'real_index_reg[11][4]' (FDC) to 'real_index_reg[12][4]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\real_index_reg[15][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\real_index_reg[14][8] )
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN-A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (M1_0/\i_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (M1_0/\i_d1_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:37 ; elapsed = 00:06:43 . Memory (MB): peak = 3118.621 ; gain = 1534.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|cos_gen     | din_re         | 32x7          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|cos_gen     | din_re         | 32x8          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_add      | 32x9          | LUT            | 
+|twf512      | twf_r_sub      | 32x9          | LUT            | 
+|twf512      | twf_r_sub      | 32x9          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_r_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_add      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x9          | LUT            | 
+|twf512      | twf_i_sub      | 32x9          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x8          | LUT            | 
+|twf512      | twf_i_sub      | 32x9          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x7          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
+|top_module  | COS_GEN/din_re | 32x8          | LUT            | 
++------------+----------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN-A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | A*B         | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step1_2     | PCIN+A*B    | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN-A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | A*B         | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|step0_2     | PCIN+A*B    | 14     | 9      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:56 ; elapsed = 00:07:05 . Memory (MB): peak = 3247.945 ; gain = 1664.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:07:29 ; elapsed = 00:07:38 . Memory (MB): peak = 3574.609 ; gain = 1990.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:357]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:358]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:353]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/module1.sv:354]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:17]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:17]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:17]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/yubdirectory/fft_project/fft_project.srcs/sources_1/imports/8.3 src/twf_m1.sv:17]
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FFT_TOP/i_0/\M0_0/sub_step00_im_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FFT_TOP/i_0/\M0_0/bfly00_im_p_reg[0][7] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:09:49 ; elapsed = 00:10:01 . Memory (MB): peak = 3600.859 ; gain = 2016.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:10:08 ; elapsed = 00:10:22 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:09 ; elapsed = 00:10:22 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:27 ; elapsed = 00:10:41 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:27 ; elapsed = 00:10:41 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:31 ; elapsed = 00:10:45 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:31 ; elapsed = 00:10:45 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fft_top     | M0_1/SR128_RE/shift_din_reg[7][0][9]          | 8      | 160   | YES          | NO                 | YES               | 160    | 0       | 
+|fft_top     | M0_1/SR128_IM/shift_din_reg[7][0][9]          | 8      | 160   | YES          | NO                 | YES               | 160    | 0       | 
+|fft_top     | M0_1/SR256_IM/shift_din_reg[15][0][9]         | 16     | 160   | YES          | NO                 | YES               | 160    | 0       | 
+|fft_top     | M0_1/SR256_RE/shift_din_reg[15][0][9]         | 16     | 160   | YES          | NO                 | YES               | 160    | 0       | 
+|fft_top     | M0_2/SR64_RE/shift_din_reg[3][0][11]          | 4      | 192   | YES          | NO                 | YES               | 192    | 0       | 
+|fft_top     | M0_2/SR128_RE/shift_din_reg[7][0][11]         | 8      | 192   | YES          | NO                 | YES               | 192    | 0       | 
+|fft_top     | M0_2/SR64_IM/shift_din_reg[3][0][11]          | 4      | 192   | YES          | NO                 | YES               | 192    | 0       | 
+|fft_top     | M0_2/SR128_IM/shift_din_reg[7][0][11]         | 8      | 192   | YES          | NO                 | YES               | 192    | 0       | 
+|fft_top     | M0_CBFP/four_reg                              | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|fft_top     | M0_CBFP/re_output_sr_n/buffer_din_reg[48][10] | 5      | 176   | YES          | NO                 | YES               | 176    | 0       | 
+|fft_top     | M0_CBFP/im_output_sr_n/buffer_din_reg[48][10] | 5      | 176   | YES          | NO                 | YES               | 176    | 0       | 
+|fft_top     | M0_CBFP/re_sr_p/dout_reg[0][22]               | 4      | 368   | YES          | NO                 | YES               | 368    | 0       | 
+|fft_top     | M0_CBFP/re_sr_n/dout_reg[0][22]               | 4      | 368   | YES          | NO                 | YES               | 368    | 0       | 
+|fft_top     | M0_CBFP/im_sr_p/dout_reg[0][22]               | 4      | 368   | YES          | NO                 | YES               | 368    | 0       | 
+|fft_top     | M0_CBFP/im_sr_n/dout_reg[0][22]               | 4      | 368   | YES          | NO                 | YES               | 368    | 0       | 
+|fft_top     | M0_0/SR_RE/shift_din_reg[15][0][8]            | 16     | 129   | YES          | NO                 | YES               | 129    | 0       | 
++------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |vio_fft       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |clk_wiz         |     1|
+|2     |vio_fft         |     1|
+|3     |CARRY8          |  2116|
+|4     |DSP_ALU         |   192|
+|5     |DSP_A_B_DATA    |   192|
+|7     |DSP_C_DATA      |   192|
+|8     |DSP_MULTIPLIER  |   192|
+|9     |DSP_M_DATA      |   192|
+|10    |DSP_OUTPUT      |   192|
+|12    |DSP_PREADD      |   192|
+|13    |DSP_PREADD_DATA |   192|
+|14    |LUT1            |  1340|
+|15    |LUT2            | 27962|
+|16    |LUT3            | 17733|
+|17    |LUT4            | 18017|
+|18    |LUT5            | 15586|
+|19    |LUT6            | 28204|
+|20    |MUXF7           |  1730|
+|21    |SRL16E          |  3362|
+|22    |FDCE            | 33779|
+|23    |FDPE            |     4|
+|24    |FDRE            |  3376|
+|25    |IBUF            |     1|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:32 ; elapsed = 00:10:45 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:21 ; elapsed = 00:10:29 . Memory (MB): peak = 3665.988 ; gain = 1846.141
+Synthesis Optimization Complete : Time (s): cpu = 00:10:32 ; elapsed = 00:10:50 . Memory (MB): peak = 3665.988 ; gain = 2082.113
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3665.988 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4039 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3669.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 193 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 192 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+322 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:11:05 ; elapsed = 00:11:26 . Memory (MB): peak = 3669.422 ; gain = 2563.227
+INFO: [Common 17-1381] The checkpoint 'D:/yubdirectory/fft_project/fft_project.runs/synth_1/top_module.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3669.422 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  5 00:19:07 2025...

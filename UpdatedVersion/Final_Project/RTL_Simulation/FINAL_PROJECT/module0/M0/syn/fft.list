@@ -1,0 +1,16 @@
+lappend search_path  ../verilog
+
+set net_list [list \
+    ../verilog/fft/module0/src/fft.sv \
+    ../verilog/fft/module0/src/counter.sv \
+    ../verilog/fft/module0/src/shift_reg.sv \
+    ../verilog/fft/module0/src/twf_m0.sv \
+    ../verilog/fft/module0/src/module0_step.sv \
+    ../verilog/fft/module0/src/module0_cbfp.sv \
+    ../verilog/fft/module0/src/cbfp_datapath.sv \
+]
+analyze -format sverilog -library WORK $net_list
+
+
+
+

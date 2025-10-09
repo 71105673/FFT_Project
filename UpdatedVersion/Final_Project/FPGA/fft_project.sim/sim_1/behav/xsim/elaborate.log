@@ -1,0 +1,50 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 9789f67fd00c44928a14d4ba2429a591 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cos_gen
+Compiling module xil_defaultlib.shift_reg(FIX=9)
+Compiling module xil_defaultlib.step0_num_counter
+Compiling module xil_defaultlib.step0_0
+Compiling module xil_defaultlib.step_num_counter(NUM=8)
+Compiling module xil_defaultlib.shift_reg(N=128)
+Compiling module xil_defaultlib.shift_reg_default
+Compiling module xil_defaultlib.step0_1
+Compiling module xil_defaultlib.step_num_counter
+Compiling module xil_defaultlib.shift_reg(N=64,FIX=12)
+Compiling module xil_defaultlib.shift_reg(N=128,FIX=12)
+Compiling module xil_defaultlib.twf512
+Compiling module xil_defaultlib.step0_2
+Compiling module xil_defaultlib.cbfp_sr
+Compiling module xil_defaultlib.fft_cbfp_cal_zero
+Compiling module xil_defaultlib.fft_output_shift
+Compiling module xil_defaultlib.cbfp_sr_output
+Compiling module xil_defaultlib.min_val
+Compiling module xil_defaultlib.module0_cbfp
+Compiling module xil_defaultlib.shift_reg(N=32,FIX=11)
+Compiling module xil_defaultlib.step10_num_counter(NUM=2)
+Compiling module xil_defaultlib.step1_0
+Compiling module xil_defaultlib.step_num_counter(NUM=1)
+Compiling module xil_defaultlib.shift11_reg(FIX=12)
+Compiling module xil_defaultlib.shift_reg(N=32,FIX=12)
+Compiling module xil_defaultlib.step1_1
+Compiling module xil_defaultlib.twf64
+Compiling module xil_defaultlib.step1_2
+Compiling module xil_defaultlib.fft_cbfp_cal_zero_m1
+Compiling module xil_defaultlib.fft_output_shift_m1
+Compiling module xil_defaultlib.module1_cbfp_default
+Compiling module xil_defaultlib.index_sum
+Compiling module xil_defaultlib.step2_0
+Compiling module xil_defaultlib.step2_1
+Compiling module xil_defaultlib.step2_2
+Compiling module xil_defaultlib.index_reorder
+Compiling module xil_defaultlib.fft_top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav

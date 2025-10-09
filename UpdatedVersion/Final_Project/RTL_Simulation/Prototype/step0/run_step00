@@ -1,0 +1,11 @@
+# 1. Compile
+vcs -sverilog -f step00_filelist -full64 -kdb -debug_access+all
+
+# 2. Run simulation (creates .txt + .fsdb)
+./simv
+
+# 3. Check output file
+# cat output_step0.txt
+
+# 4. Launch Verdi
+./simv -verdi &

@@ -1,0 +1,84 @@
+Warning: Design 'fft' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: Design 'fft' contains 15 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fft
+Version: V-2023.12-SP5-4
+Date   : Mon Jul 28 21:47:28 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: dut_02/sub_step02_re_pn_nn_reg_9__13_
+              (rising edge-triggered flip-flop clocked by fft_clk)
+  Endpoint: dut_02/bfly02_im_n_reg_9__22_
+            (rising edge-triggered flip-flop clocked by fft_clk)
+  Path Group: fft_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock fft_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dut_02/sub_step02_re_pn_nn_reg_9__13_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)
+                                                          0.00       0.00 r
+  dut_02/sub_step02_re_pn_nn_reg_9__13_/Q (SC7P5T_SDFFRQX2_A_CSC20L)
+                                                         81.49      81.49 r
+  dut_02/U5168/Z (SC7P5T_INVX2_CSC20L)                   48.23     129.71 f
+  dut_02/U2121/Z (SC7P5T_OR2X4_P_CSC20L)                 49.56     179.28 f
+  dut_02/U12002/Z (SC7P5T_AO21IAX2_CSC20L)               53.01     232.29 f
+  dut_02/U26273/Z (SC7P5T_ND2X1_MR_CSC20L)               27.24     259.53 r
+  dut_02/DP_OP_855J2_161_8459_U309/Z (SC7P5T_MUXI2X1_CSC20L)
+                                                         31.56     291.09 r
+  dut_02/U27838/CO (SC7P5T_FAX1_A_CSC20L)                50.47     341.56 r
+  dut_02/intadd_152_U22/CO (SC7P5T_FAX1_A_CSC20L)        44.75     386.31 r
+  dut_02/intadd_152_U21/CO (SC7P5T_FAX1_A_CSC20L)        44.75     431.06 r
+  dut_02/intadd_152_U20/CO (SC7P5T_FAX1_A_CSC20L)        44.75     475.82 r
+  dut_02/intadd_152_U19/CO (SC7P5T_FAX1_A_CSC20L)        46.34     522.15 r
+  dut_02/U27840/CO (SC7P5T_FAX2_A_CSC20L)                36.03     558.19 r
+  dut_02/U27839/CO (SC7P5T_FAX2_A_CSC20L)                34.97     593.15 r
+  dut_02/intadd_152_U16/CO (SC7P5T_FAX2_A_CSC20L)        36.49     629.64 r
+  dut_02/intadd_152_U15/CO (SC7P5T_FAX1_A_CSC20L)        44.10     673.74 r
+  dut_02/intadd_152_U14/CO (SC7P5T_FAX2_A_CSC20L)        35.29     709.03 r
+  dut_02/intadd_152_U13/CO (SC7P5T_FAX1_A_CSC20L)        44.10     753.13 r
+  dut_02/intadd_152_U12/CO (SC7P5T_FAX2_A_CSC20L)        35.29     788.41 r
+  dut_02/intadd_152_U11/CO (SC7P5T_FAX1_A_CSC20L)        42.51     830.93 r
+  dut_02/intadd_152_U10/CO (SC7P5T_FAX1_A_CSC20L)        46.33     877.26 r
+  dut_02/intadd_152_U9/CO (SC7P5T_FAX2_A_CSC20L)         36.03     913.29 r
+  dut_02/U27842/CO (SC7P5T_FAX2_A_CSC20L)                33.45     946.74 r
+  dut_02/U27841/CO (SC7P5T_FAX2_A_CSC20L)                33.44     980.18 r
+  dut_02/intadd_152_U6/CO (SC7P5T_FAX2_A_CSC20L)         32.70    1012.88 r
+  dut_02/intadd_152_U5/CO (SC7P5T_FAX1_A_CSC20L)         44.10    1056.98 r
+  dut_02/intadd_152_U4/CO (SC7P5T_FAX2_A_CSC20L)         35.29    1092.26 r
+  dut_02/intadd_152_U3/CO (SC7P5T_FAX1_A_CSC20L)         44.10    1136.36 r
+  dut_02/intadd_152_U2/CO (SC7P5T_FAX2_A_CSC20L)         33.75    1170.11 r
+  dut_02/U26282/Z (SC7P5T_AO22IA1A2X1_CSC20L)            27.65    1197.76 r
+  dut_02/U26283/Z (SC7P5T_MUX2X1_A_CSC20L)               29.34    1227.10 r
+  dut_02/U26286/Z (SC7P5T_AO22IA1A2X1_CSC20L)            26.72    1253.82 r
+  dut_02/bfly02_im_n_reg_9__22_/D (SC7P5T_SDFFQX4_CSC20L)
+                                                          0.00    1253.82 r
+  data arrival time                                               1253.82
+
+  clock fft_clk (rise edge)                            1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                     -50.00    1350.00
+  dut_02/bfly02_im_n_reg_9__22_/CLK (SC7P5T_SDFFQX4_CSC20L)
+                                                          0.00    1350.00 r
+  library setup time                                    -54.13    1295.87
+  data required time                                              1295.87
+  --------------------------------------------------------------------------
+  data required time                                              1295.87
+  data arrival time                                              -1253.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                       42.05
+
+
+1

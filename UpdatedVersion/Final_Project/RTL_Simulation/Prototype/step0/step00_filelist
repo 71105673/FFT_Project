@@ -1,0 +1,4 @@
+./counter.sv
+./shift_reg.sv
+./step0_0.sv
+./tb_step00.sv

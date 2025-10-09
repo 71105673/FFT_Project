@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../../fft_project.gen/sources_1/ip/vio_fft/hdl/verilog" --include "../../../../fft_project.gen/sources_1/ip/vio_fft/hdl" \
+"../../../../fft_project.gen/sources_1/ip/vio_fft/sim/vio_fft.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

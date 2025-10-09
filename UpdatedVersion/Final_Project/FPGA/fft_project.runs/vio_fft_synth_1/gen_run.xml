@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="vio_fft_synth_1" LaunchPart="xczu7ev-fbvb900-1-i" LaunchTime="1754308537">
+  <File Type="PA-TCL" Name="vio_fft.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="vio_fft_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="vio_fft_reports.tcl"/>
+  <File Type="RDS-RDS" Name="vio_fft.vds"/>
+  <File Type="RDS-UTIL" Name="vio_fft_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="vio_fft_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="vio_fft.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="vio_fft_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="vio_fft_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vio_fft">
+    <File Path="$PSRCDIR/sources_1/ip/vio_fft/vio_fft.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="vio_fft"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vio_fft">
+    <File Path="$PSRCDIR/sources_1/ip/vio_fft/vio_fft.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="vio_fft"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

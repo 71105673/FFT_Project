@@ -1,0 +1,4 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Simulation finished.
+$finish called at time : 5020 ns : File "D:/yubdirectory/fft_project/fft_project.srcs/sim_1/imports/8.3 src/tb_cos_gen.sv" Line 62

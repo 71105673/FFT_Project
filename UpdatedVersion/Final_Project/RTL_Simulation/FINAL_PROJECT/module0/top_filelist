@@ -1,0 +1,5 @@
+./counter.sv
+./shift_reg.sv
+./twf_m0.sv
+./module0_step.sv
+./tb_top.sv

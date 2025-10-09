@@ -1,0 +1,13 @@
+./counter.sv
+./shift_reg.sv
+./function.sv
+./cbfp_datapath.sv
+./cos_gen.sv
+./module0.sv
+./module1.sv
+./module2.sv
+./module0_cbfp.sv
+./module1_cbfp.sv
+./twf_m0.sv
+./twf_m1.sv
+./tb_cos_gen.sv

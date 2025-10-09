@@ -1,0 +1,20 @@
+
+lappend search_path  ../verilog
+
+set net_list [list \
+    ../verilog/fft/FFT_FINAL/function.sv \
+    ../verilog/fft/FFT_FINAL/counter.sv \
+    ../verilog/fft/FFT_FINAL/shift_reg.sv \
+    ../verilog/fft/FFT_FINAL/twf_m0.sv \
+    ../verilog/fft/FFT_FINAL/module0.sv \
+    ../verilog/fft/FFT_FINAL/module0_cbfp.sv \
+    ../verilog/fft/FFT_FINAL/cbfp_datapath.sv \
+    ../verilog/fft/FFT_FINAL/twf_m1.sv \
+    ../verilog/fft/FFT_FINAL/module1.sv \
+    ../verilog/fft/FFT_FINAL/module1_cbfp.sv \
+    ../verilog/fft/FFT_FINAL/module2.sv \
+    ../verilog/fft/FFT_FINAL/fft.sv \
+
+]
+analyze -format sverilog -library WORK $net_list
+

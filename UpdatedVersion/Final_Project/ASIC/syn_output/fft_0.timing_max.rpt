@@ -1,0 +1,120 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'fft' contains 14 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fft
+Version: V-2023.12-SP5-4
+Date   : Tue Aug  5 16:43:51 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: M1_2/bfly12_re_reg_9__14_
+              (rising edge-triggered flip-flop clocked by fft_clk)
+  Endpoint: M1_CBFP/cal_n/cal_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by fft_clk)
+  Path Group: fft_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock fft_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  M1_2/bfly12_re_reg_9__14_/CLK (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  M1_2/bfly12_re_reg_9__14_/Q (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                         54.66      54.66 r
+  M1_2/bfly12_re[164] (step1_2)                           0.00      54.66 r
+  M1_CBFP/din_re[164] (module1_cbfp_cnt_size5_array_size16_array_num4_din_size25_dout_size12_buffer_depth64)
+                                                          0.00      54.66 r
+  M1_CBFP/cal_n/din_re[164] (fft_cbfp_cal_zero_m1_cnt_size5_array_size8_din_size25_0)
+                                                          0.00      54.66 r
+  M1_CBFP/cal_n/U224/Z (SC7P5T_ND3X3_CSC20L)             16.92      71.58 f
+  M1_CBFP/cal_n/U160/Z (SC7P5T_NR2X2_MR_CSC20L)          11.81      83.39 r
+  M1_CBFP/cal_n/U1224/Z (SC7P5T_ND2X2_CSC20L)            15.32      98.71 f
+  M1_CBFP/cal_n/U1230/Z (SC7P5T_OR2X2_A_CSC20L)          27.73     126.44 f
+  M1_CBFP/cal_n/U1355/Z (SC7P5T_AOI21X1_MR_CSC20L)       18.96     145.40 r
+  M1_CBFP/cal_n/U425/Z (SC7P5T_OAI211X2_CSC20L)          23.72     169.12 f
+  M1_CBFP/cal_n/U1361/Z (SC7P5T_NR2X1_MR_CSC20L)         20.03     189.14 r
+  M1_CBFP/cal_n/U281/Z (SC7P5T_OA31X2_CSC20L)            33.51     222.66 r
+  M1_CBFP/cal_n/U282/Z (SC7P5T_INVX2_CSC20L)              9.87     232.53 f
+  M1_CBFP/cal_n/U231/Z (SC7P5T_AOI31X3_CSC20L)           14.34     246.87 r
+  M1_CBFP/cal_n/U229/Z (SC7P5T_ND2X1_MR_CSC20L)          12.92     259.79 f
+  M1_CBFP/cal_n/U228/Z (SC7P5T_OAI21X1_CSC20L)           14.54     274.33 r
+  M1_CBFP/cal_n/U489/Z (SC7P5T_AOI21X1_MR_CSC20L)        23.69     298.02 f
+  M1_CBFP/cal_n/U1404/Z (SC7P5T_OAI31X3_CSC20L)          24.35     322.36 r
+  M1_CBFP/cal_n/U14/Z (SC7P5T_MUX2X1_A_CSC20L)           38.52     360.89 f
+  M1_CBFP/cal_n/U267/Z (SC7P5T_INVX2_CSC20L)             12.23     373.11 r
+  M1_CBFP/cal_n/U241/Z (SC7P5T_AO21IAX4_CSC20L)          25.74     398.85 r
+  M1_CBFP/cal_n/U1514/Z (SC7P5T_NR2X3_CSC20L)            11.79     410.65 f
+  M1_CBFP/cal_n/U1549/Z (SC7P5T_MUXI2X1_CSC20L)          30.45     441.09 f
+  M1_CBFP/cal_n/U274/Z (SC7P5T_AOI31X2_CSC20L)           24.49     465.58 r
+  M1_CBFP/cal_n/U214/Z (SC7P5T_ND2X4_CSC20L)             19.26     484.84 f
+  M1_CBFP/cal_n/U3/Z (SC7P5T_BUFX8_A_CSC20L)             20.90     505.74 f
+  M1_CBFP/cal_n/U213/Z (SC7P5T_OAI21X4_CSC20L)           15.14     520.87 r
+  M1_CBFP/cal_n/U212/Z (SC7P5T_AOI22X4_CSC20L)           15.17     536.04 f
+  M1_CBFP/cal_n/U1685/Z (SC7P5T_ND2X2_CSC20L)            12.05     548.10 r
+  M1_CBFP/cal_n/U1686/Z (SC7P5T_OAI21X2_CSC20L)          15.83     563.93 f
+  M1_CBFP/cal_n/U1694/Z (SC7P5T_AOI22X1_CSC20L)          21.17     585.10 r
+  M1_CBFP/cal_n/U531/Z (SC7P5T_OAI31X3_CSC20L)           20.33     605.43 f
+  M1_CBFP/cal_n/U527/Z (SC7P5T_BUFX4_CSC20L)             19.38     624.81 f
+  M1_CBFP/cal_n/U261/Z (SC7P5T_OAI21X2_CSC20L)           16.49     641.30 r
+  M1_CBFP/cal_n/U1728/Z (SC7P5T_ND2X2_CSC20L)            12.73     654.02 f
+  M1_CBFP/cal_n/U240/Z (SC7P5T_OA21IAX4_CSC20L)          25.99     680.01 f
+  M1_CBFP/cal_n/U47/Z (SC7P5T_AO21IAX3_CSC20L)           24.46     704.47 f
+  M1_CBFP/cal_n/U1758/Z (SC7P5T_NR2X2_MR_CSC20L)         11.95     716.43 r
+  M1_CBFP/cal_n/U508/Z (SC7P5T_OA21X2_CSC20L)            27.74     744.16 r
+  M1_CBFP/cal_n/U46/Z (SC7P5T_INVX4_CSC20L)              10.96     755.13 f
+  M1_CBFP/cal_n/U509/Z (SC7P5T_ND2X2_CSC20L)              8.51     763.64 r
+  M1_CBFP/cal_n/U1834/Z (SC7P5T_OAI21X2_CSC20L)          14.02     777.66 f
+  M1_CBFP/cal_n/U1847/Z (SC7P5T_OA22IA1A2X1_CSC20L)      16.19     793.85 r
+  M1_CBFP/cal_n/U1848/Z (SC7P5T_OAI21X2_CSC20L)          20.15     814.00 f
+  M1_CBFP/cal_n/U1864/Z (SC7P5T_MUXI2X1_CSC20L)          37.76     851.76 f
+  M1_CBFP/cal_n/U1886/Z (SC7P5T_AOI22X1_CSC20L)          24.14     875.90 r
+  M1_CBFP/cal_n/U1887/Z (SC7P5T_OAI21X2_CSC20L)          23.43     899.34 f
+  M1_CBFP/cal_n/U288/Z (SC7P5T_MUX2X2_CSC20L)            41.50     940.84 r
+  M1_CBFP/cal_n/U41/Z (SC7P5T_INVX3_CSC20L)              10.07     950.91 f
+  M1_CBFP/cal_n/U1957/Z (SC7P5T_OA22IA1A2X2_CSC20L)      15.62     966.53 r
+  M1_CBFP/cal_n/U287/Z (SC7P5T_OAI21X3_CSC20L)           19.66     986.18 f
+  M1_CBFP/cal_n/U273/Z (SC7P5T_NR2X3_CSC20L)             11.66     997.84 r
+  M1_CBFP/cal_n/U264/Z (SC7P5T_AOI21X2_CSC20L)           12.52    1010.36 f
+  M1_CBFP/cal_n/U532/Z (SC7P5T_OA31X2_CSC20L)            39.45    1049.81 f
+  M1_CBFP/cal_n/U271/Z (SC7P5T_INVX6_CSC20L)             11.40    1061.21 r
+  M1_CBFP/cal_n/U233/Z (SC7P5T_ND2IAX2_CSC20L)           11.00    1072.21 f
+  M1_CBFP/cal_n/U232/Z (SC7P5T_OAI21X3_CSC20L)           11.99    1084.20 r
+  M1_CBFP/cal_n/U2057/Z (SC7P5T_OA22IA1A2X2_CSC20L)      20.36    1104.56 f
+  M1_CBFP/cal_n/U286/Z (SC7P5T_MUXT2X4_CSC20L)           36.83    1141.39 r
+  M1_CBFP/cal_n/U504/Z (SC7P5T_AOI31X1_CSC20L)           25.75    1167.14 f
+  M1_CBFP/cal_n/U290/Z (SC7P5T_OAI31X3_CSC20L)           20.74    1187.88 r
+  M1_CBFP/cal_n/U2168/Z (SC7P5T_MUXI2X1_CSC20L)          28.70    1216.58 r
+  M1_CBFP/cal_n/U2174/Z (SC7P5T_NR2X1_MR_CSC20L)         10.80    1227.38 f
+  M1_CBFP/cal_n/U643/Z (SC7P5T_ND2IAX2_CSC20L)           23.32    1250.70 f
+  M1_CBFP/cal_n/U221/Z (SC7P5T_OAI31X3_CSC20L)           22.92    1273.62 r
+  M1_CBFP/cal_n/U219/Z (SC7P5T_ND2X2_CSC20L)             11.07    1284.69 f
+  M1_CBFP/cal_n/U35/Z (SC7P5T_OAI21X1_CSC20L)             9.91    1294.60 r
+  M1_CBFP/cal_n/cal_cnt_reg_0_/D (SC7P5T_SDFFRQX4_CSC20L)
+                                                          0.00    1294.60 r
+  data arrival time                                               1294.60
+
+  clock fft_clk (rise edge)                            1400.00    1400.00
+  clock network delay (ideal)                             0.00    1400.00
+  clock uncertainty                                     -50.00    1350.00
+  M1_CBFP/cal_n/cal_cnt_reg_0_/CLK (SC7P5T_SDFFRQX4_CSC20L)
+                                                          0.00    1350.00 r
+  library setup time                                    -55.26    1294.74
+  data required time                                              1294.74
+  --------------------------------------------------------------------------
+  data required time                                              1294.74
+  data arrival time                                              -1294.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.14
+
+
+1
