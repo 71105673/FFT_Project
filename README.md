@@ -569,7 +569,7 @@ comp_min_cbfp comp_im1 (
 
 |Setup_time| Area|
 --|--|
-|<div align = "middle"> 0.01 ps|<div align = "middle"> 187448.9|
+|<div align = "middle"> 0.01 ns|<div align = "middle"> 187448.9|
 
 
 Timing_max| Area
