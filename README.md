@@ -265,6 +265,19 @@ FPGA 구현에 최적화되어 있으며, **자원 사용, 타이밍, 연산 정
   - Fixed-point 변환 후 정확도 확인이 쉬움
 
 
+#### HW Architecture
+![alt text](<image/profile/HW Archi/Ar.png>)
+
+#### Block Diagram
+![alt text](<image/profile/HW Archi/block.png>)
+#### Timming Diagram
+![alt text](<image/profile/HW Archi/Timming.png>)
+
+#### Module 0
+![alt text](<image/profile/HW Archi/module0.png>)
+#### Module 1-2
+![alt text](<image/profile/HW Archi/module1-2.png>)
+
 🎉 즉, **BF I / BF II 블록 구분** = **연산 단순화 + 하드웨어 최적화 + 병렬화 용이 + 검증 편리성**을 동시에 얻는 구조
 <br>
 
@@ -439,7 +452,7 @@ for ii=1:8
 * 각 블록(64개 단위)마다 최대한 안전하게 Shift 할 수 있는 폭을 계산해, 해당 비트 수만큼 전부 정규화(bit shift)한다.
 
 > **CBFP RTL(일부)**
-
+![alt text](image/profile/RTL_Simulation/cbfp.png)
 
 ```systemverilog
 genvar j;
@@ -481,6 +494,11 @@ comp_min_cbfp comp_im1 (
 > ### :four: **LUT 사용**  
 
 : twiddle factor를 ROM에 미리 저장하여 곱셈 비용 절감
+
+| fac8_1 rotation Code | fac8_1 rotation 구조 |
+|-----------------|-----------------|
+| <img src="image/profile/RTL_Simulation/fac8_1.png" width="480" height="320"> | <img src="image/profile/RTL_Simulation/fac.png" width="480" height="320"> |
+
 
 ### 😎 RTL Simulation
 
@@ -533,3 +551,25 @@ comp_min_cbfp comp_im1 (
 
 🎉 Matlab을 통해 예측한 결과와 같음을 확인할 수 있다.  <br>
 ☑️ FPGA와 연결하기 위해 Cosine Input을 8clk 쉬고 다시 반복하도록 설계하여 출력이 진행될 때도 Input Data가 입력되는 것을 확인할 수 있다.
+
+#### din
+![alt text](image/profile/Sim/din.png)
+
+#### dout
+![alt text](image/profile/Sim/Dout.png)
+
+#### in -> Out까지 첫 출력 시간
+![alt text](image/profile/Sim/outclk.png)
+
+## (3) Synthesis
+
+|Setup_time| Area|
+--|--|
+|<div align = "middle"> 0.01 ps|<div align = "middle"> 187448.9|
+
+
+Timing_max| Area
+--|--
+|<img src="image/Syn/slack.png" width=400>| <img src="image/Syn/Area.png" width=400>|
+
+> Hold time은 Layout 단계에서 충분히 해결 가능하므로 front-end 과정에서는 Setup time과 Area 최적화에 집중하였다.
