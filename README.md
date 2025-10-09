@@ -8,7 +8,7 @@ Vivado 2020.2 환경에서 테스트되었으며, **고성능 연산과 파이�
 ## 팀원
 | 정민교 | 엄찬하 | 신상학 | 임재홍 |
 |--------|--------|--------|--------|
-| -Team Leader <br> -Algorithm Designer | -RTL Design Engineer <br> -Algorithm Designer | RTL Design Engineer | RTL Design Engineer |
+| Team Leader <br> Algorithm Designer | RTL Design Engineer <br> Algorithm Designer | RTL Design Engineer | RTL Design Engineer |
 | <img src="image/profile/민교.png" width="240" height="160"> | <img src="image/profile/엄찬하.JPG" width="240" height="160"> | <img src="image/profile/상학.png" width="240" height="160"> | <img src="image/profile/재홍.png" width="240" height="160"> |
 
 
