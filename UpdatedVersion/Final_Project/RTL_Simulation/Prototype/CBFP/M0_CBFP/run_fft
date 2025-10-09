@@ -1,2 +1,0 @@
-vcs -full64 -sverilog -kdb  -debug_access+all+reverse -f min_filelist -o simv
-./simv -verdi &

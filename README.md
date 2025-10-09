@@ -146,6 +146,17 @@ FPGA 구현에 최적화되어 있으며, **자원 사용, 타이밍, 연산 정
 │
 └── 📁 schematic    
 
+📁 UpdatedVersion -> 추가로 개선점을 적용한 버젼
+│ 
+├── 📁 ASIC
+│  
+├── 📁 FPGA
+│  
+├── 📁 MATLAB
+│  
+└── 📁 RTL_Simulation
+
+
 ```
 ## 참고
 자세한 내용은 PPT를 확인해 주세요
